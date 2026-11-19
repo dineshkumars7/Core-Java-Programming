@@ -127,7 +127,7 @@ Solutions are attempted independently before referring to hints or complete impl
 1. Clone this repository.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Core-Java-Programming.git
+git clone https://github.com/dineshkumars7/Core-Java-Programming.git
 ```
 
 2. Import the project into Eclipse as an Existing Maven Project.
