@@ -1,0 +1,306 @@
+Here are the complete, runnable Java programs for all 10 exercises on Classes and Objects (including Exercise 10: Object Return—creating a method that creates and returns an object).
+
+01. Employee Object
+
+java
+class Employee {
+    int id;
+    String name;
+    double salary;
+
+    void displayDetails() {
+        System.out.println("ID     : " + id);
+        System.out.println("Name   : " + name);
+        System.out.println("Salary : " + salary);
+    }
+}
+
+public class EmployeeDemo {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.id = 101;
+        emp.name = "Karthik";
+        emp.salary = 55000.0;
+
+        emp.displayDetails();
+    }
+}
+Use code with caution.
+
+02. Student Object
+
+java
+class Student {
+    String name;
+    int rollNumber;
+    double marks;
+
+    void displayData() {
+        System.out.println("Roll No : " + rollNumber);
+        System.out.println("Name    : " + name);
+        System.out.println("Marks   : " + marks);
+    }
+}
+
+public class StudentDemo {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        s1.name = "Ananya";
+        s1.rollNumber = 14;
+        s1.marks = 91.5;
+
+        s1.displayData();
+    }
+}
+Use code with caution.
+
+03. Bank Account
+
+java
+class BankAccount {
+    double balance = 1000.0;
+
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited: " + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    void displayBalance() {
+        System.out.println("Current Balance: " + balance);
+    }
+}
+
+public class BankAccountDemo {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+        account.displayBalance();
+        account.deposit(2500.0);
+        account.displayBalance();
+    }
+}
+Use code with caution.
+
+04. Calculator Object
+
+java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int subtract(int a, int b) {
+        return a - b;
+    }
+
+    int multiply(int a, int b) {
+        return a * b;
+    }
+
+    double divide(double a, double b) {
+        if (b == 0) {
+            System.out.println("Cannot divide by zero.");
+            return 0;
+        }
+        return a / b;
+    }
+}
+
+public class CalculatorObjectDemo {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+
+        System.out.println("Add      : " + calc.add(15, 5));
+        System.out.println("Subtract : " + calc.subtract(15, 5));
+        System.out.println("Multiply : " + calc.multiply(15, 5));
+        System.out.println("Divide   : " + calc.divide(15, 5));
+    }
+}
+Use code with caution.
+
+05. Multiple Objects
+
+java
+class Employee {
+    int id;
+    String name;
+    double salary;
+
+    void display() {
+        System.out.println(id + " | " + name + " | " + salary);
+    }
+}
+
+public class MultipleEmployees {
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        e1.id = 1; e1.name = "Ravi"; e1.salary = 45000;
+
+        Employee e2 = new Employee();
+        e2.id = 2; e2.name = "Meera"; e2.salary = 52000;
+
+        Employee e3 = new Employee();
+        e3.id = 3; e3.name = "Vikram"; e3.salary = 60000;
+
+        e1.display();
+        e2.display();
+        e3.display();
+    }
+}
+Use code with caution.
+
+06. Car Object
+
+java
+class Car {
+    String brand;
+    String model;
+    int speed;
+
+    void accelerate(int increment) {
+        speed += increment;
+        System.out.println(brand + " " + model + " accelerated by " + increment + " km/h.");
+    }
+
+    void displaySpeed() {
+        System.out.println("Current Speed: " + speed + " km/h");
+    }
+}
+
+public class CarDemo {
+    public static void main(String[] args) {
+        Car myCar = new Car();
+        myCar.brand = "Hyundai";
+        myCar.model = "Creta";
+        myCar.speed = 40;
+
+        myCar.displaySpeed();
+        myCar.accelerate(30);
+        myCar.displaySpeed();
+    }
+}
+Use code with caution.
+
+07. Object Interaction
+
+java
+class Login {
+    boolean authenticate(String username, String password) {
+        if (username.equals("admin") && password.equals("1234")) {
+            System.out.println("Login successful for user: " + username);
+            return true;
+        }
+        System.out.println("Invalid credentials.");
+        return false;
+    }
+}
+
+class Dashboard {
+    void loadDashboard(String username) {
+        System.out.println("Welcome to the Dashboard, " + username + "!");
+    }
+}
+
+public class AppRunner {
+    public static void main(String[] args) {
+        Login login = new Login();
+        Dashboard dashboard = new Dashboard();
+
+        String user = "admin";
+        if (login.authenticate(user, "1234")) {
+            dashboard.loadDashboard(user);
+        }
+    }
+}
+Use code with caution.
+
+08. Book Objects
+
+java
+class Book {
+    String title;
+    String author;
+    double price;
+
+    void printBookInfo() {
+        System.out.println("Title: " + title + " | Author: " + author + " | Price: ₹" + price);
+    }
+}
+
+public class BookDemo {
+    public static void main(String[] args) {
+        Book b1 = new Book();
+        b1.title = "Clean Code";
+        b1.author = "Robert C. Martin";
+        b1.price = 650.0;
+
+        Book b2 = new Book();
+        b2.title = "Effective Java";
+        b2.author = "Joshua Bloch";
+        b2.price = 850.0;
+
+        b1.printBookInfo();
+        b2.printBookInfo();
+    }
+}
+Use code with caution.
+
+09. Object as Parameter
+
+java
+class Employee {
+    int id;
+    String name;
+    double salary;
+}
+
+public class ObjectAsParameterDemo {
+    static void printEmployee(Employee emp) {
+        System.out.println("--- Employee Details ---");
+        System.out.println("ID     : " + emp.id);
+        System.out.println("Name   : " + emp.name);
+        System.out.println("Salary : " + emp.salary);
+    }
+
+    public static void main(String[] args) {
+        Employee emp1 = new Employee();
+        emp1.id = 205;
+        emp1.name = "Deepa";
+        emp1.salary = 72000.0;
+
+        printEmployee(emp1);
+    }
+}
+Use code with caution.
+
+10. Object Return
+
+java
+class Product {
+    int id;
+    String name;
+    double price;
+
+    void showProduct() {
+        System.out.println("Product ID: " + id + ", Name: " + name + ", Price: " + price);
+    }
+}
+
+public class ObjectReturnDemo {
+    // Method that creates, populates, and returns a Product object
+    static Product createProduct(int id, String name, double price) {
+        Product p = new Product();
+        p.id = id;
+        p.name = name;
+        p.price = price;
+        return p;
+    }
+
+    public static void main(String[] args) {
+        Product item = createProduct(501, "Mechanical Keyboard", 3499.0);
+        item.showProduct();
+    }
+}
