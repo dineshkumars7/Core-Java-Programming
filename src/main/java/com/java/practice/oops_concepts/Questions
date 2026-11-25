@@ -1,0 +1,13 @@
+Topic 13 – OOP Concepts
+Objective: Combine encapsulation, inheritance, abstraction and polymorphism in practical scenarios.
+No.	Program	Requirement
+01	Encapsulation	Create an Employee class with private variables and public getters and setters.
+02	Encapsulation Validation	Create a BankAccount class where balance is private and deposit and withdrawal methods validate amounts.
+03	Abstraction Using Abstract Class	Create an abstract Vehicle class with an abstract method start() and a concrete method stop().
+04	Abstraction Using Interface	Create a Payment interface and implement it using two payment classes.
+05	Inheritance and Encapsulation	Create a parent Employee class and child Manager class with protected/shared and private members.
+06	Method Overriding	Create a parent Browser class and child ChromeBrowser class that overrides a browser launch method.
+07	Runtime Polymorphism	Create parent class references pointing to different child class objects and invoke overridden methods.
+08	Interface-Based Abstraction	Create a Login interface and implement it in two different login classes.
+09	Combined OOP	Create an Employee Management application using encapsulation, inheritance, abstraction and polymorphism.
+10	QA Automation Design	Create a mini automation design containing a base test class, login page, dashboard page and test execution class using OOP concepts.

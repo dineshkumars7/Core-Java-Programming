@@ -1,0 +1,13 @@
+Topic 14 – Inheritance
+Objective: Understand parent-child relationships, extends, member inheritance, constructor execution and hierarchy.
+No.	Program	Requirement
+01	Single Inheritance	Create a parent Animal class and child Dog class. Invoke parent and child methods.
+02	Single Inheritance – Employee	Create an Employee class and Manager class extending Employee.
+03	Multilevel Inheritance	Create Grandparent, Parent and Child classes and invoke their methods from the Child object.
+04	Multilevel – Vehicle	Create Vehicle, Car and ElectricCar classes using multilevel inheritance.
+05	Hierarchical Inheritance	Create a parent Shape class and child Circle, Rectangle and Triangle classes.
+06	Hierarchical – Employee	Create an Employee parent class with Developer, Tester and Manager child classes.
+07	Constructor Inheritance	Demonstrate constructor execution order in parent and child classes.
+08	super Keyword	Use super to access parent class variables and methods.
+09	Method Overriding in Inheritance	Override a method in child classes and execute it using child objects.
+10	QA Framework Inheritance	Create a BaseTest class and extend it from LoginTest and SearchTest classes.

@@ -1,0 +1,13 @@
+Topic 08 – Arrays
+Objective: Array declaration, traversal, manipulation, searching, sorting and multidimensional arrays.
+No.	Program	Requirement
+01	Array Traversal	Declare an integer array and print all elements using a for loop.
+02	Sum and Average	Calculate the sum and average of all array elements.
+03	Largest and Smallest	Find the largest and smallest elements in an array.
+04	Reverse an Array	Reverse the array without using another array.
+05	Linear Search	Search for a given element and print its index if found.
+06	Sort an Array	Sort an integer array in ascending order without using built-in sorting methods.
+07	Duplicate Elements	Identify and print duplicate elements in an array.
+08	Remove Duplicates	Create a new array containing only unique elements.
+09	Second Largest Number	Find the second-largest distinct number in an array.
+10	Matrix Addition	Add two 2D matrices and print the resulting matrix.

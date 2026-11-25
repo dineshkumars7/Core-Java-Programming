@@ -1,0 +1,13 @@
+Topic 12 – Constructors
+Objective: Object initialization, constructor types, constructor overloading and constructor chaining.
+No.	Program	Requirement
+01	Default Constructor	Create a class with an explicitly declared default constructor and initialize default values.
+02	Compiler-Provided Default	Create a class without any constructor and instantiate it. Observe the default initialization.
+03	Parameterized Constructor	Create an Employee class with a parameterized constructor that initializes ID, name and salary.
+04	Multiple Objects	Create multiple objects using the same parameterized constructor with different values.
+05	Constructor Overloading	Create constructors with different parameter lists in the same class.
+06	Two Parameter Constructors	Create a Student class with constructors accepting name only and name plus marks.
+07	this Keyword	Use this to differentiate instance variables from constructor parameters.
+08	Constructor Chaining Using this()	Invoke one constructor from another constructor in the same class.
+09	Constructor Chaining Using super()	Create parent and child classes and invoke the parent constructor from the child constructor.
+10	Constructor-Based Object Initialization	Create a TestConfiguration class that initializes browser name, URL and timeout through constructors.

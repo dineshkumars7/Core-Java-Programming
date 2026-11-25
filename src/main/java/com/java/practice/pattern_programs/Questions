@@ -1,0 +1,49 @@
+Topic 07 – Pattern Programs
+Objective: Nested loops, row/column logic, counters and pattern construction.
+No.	Program	Requirement
+01	Right-Angled Star Pattern	Print a right-angled triangle using stars.
+02	Inverted Star Triangle	Print an inverted right-angled triangle.
+03	Square Star Pattern	Print a square pattern of stars using nested loops.
+04	Number Triangle	Print a triangle where each row contains numbers from 1 up to the row number.
+05	Repeated Number Triangle	Print a triangle where each row contains the same number.
+06	Inverted Number Triangle	Print an inverted number triangle.
+07	Pyramid Pattern	Print a centered pyramid using spaces and stars.
+08	Inverted Pyramid	Print an inverted centered pyramid.
+09	Diamond Pattern	Print a full diamond pattern using stars.
+10	Floyd's Triangle	Print sequential numbers in a triangular pattern.
+
+Expected patterns for practice:
+01. Right-angled triangle
+
+*
+**
+***
+****
+*****
+
+
+03. Square
+
+*****
+*****
+*****
+*****
+*****
+
+
+04. Number triangle
+
+1
+12
+123
+1234
+12345
+
+
+05. Repeated numbers
+
+1
+22
+333
+4444
+55555

@@ -1,0 +1,13 @@
+Topic 10 – Methods
+Objective: Method declaration, invocation, parameters, return values, overloading and recursion.
+No.	Program	Requirement
+01	Simple Method	Create a method that prints a welcome message and invoke it from main().
+02	Method with Parameters	Create a method that accepts two integers and prints their sum.
+03	Method with Return Value	Create a method that accepts two numbers and returns their multiplication result.
+04	Odd or Even Method	Create a method that accepts an integer and returns whether it is even or odd.
+05	Largest Number Method	Create a method that accepts three numbers and returns the largest number.
+06	Calculator Methods	Create separate methods for addition, subtraction, multiplication and division.
+07	Method Overloading	Create overloaded methods to calculate the sum of 2, 3 and 4 integers.
+08	String Method	Create a method that accepts a string and returns the reversed string.
+09	Factorial Using Recursion	Calculate factorial using a recursive method.
+10	Fibonacci Using Recursion	Create a recursive method to calculate a Fibonacci number

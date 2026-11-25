@@ -1,0 +1,13 @@
+Topic 11 – Classes and Objects
+Objective: Object creation, reference variables, instance members, state and behaviour, object interaction.
+No.	Program	Requirement
+01	Employee Object	Create an Employee class with ID, name and salary. Create an object and display its details.
+02	Student Object	Create a Student class with name, roll number and marks. Create an object and display the data.
+03	Bank Account	Create a BankAccount class with balance and methods to deposit and display balance.
+04	Calculator Object	Create a Calculator class with instance methods for arithmetic operations.
+05	Multiple Objects	Create three Employee objects with different data and display their details.
+06	Car Object	Create a Car class with brand, model and speed. Create methods to accelerate and display speed.
+07	Object Interaction	Create a Login class and a Dashboard class. Invoke a Dashboard method after calling the Login method from a separate runner class.
+08	Book Objects	Create a Book class and create multiple book objects with different details.
+09	Object as Parameter	Create a method that accepts an Employee object as a parameter and prints its details.
+10	Object Return	Create a method that creates and returns a Student object. Invoke the method and display the returned object's details.
