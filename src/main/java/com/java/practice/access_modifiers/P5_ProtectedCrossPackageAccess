@@ -1,0 +1,37 @@
+Program 1
+=========
+
+
+package pkg1;
+
+public class ParentBase {
+    protected String frameworkName = "Hybrid Automation Framework";
+
+    protected void initDriver() {
+        System.out.println("Driver initialized in " + frameworkName);
+    }
+}
+
+
+Program 2
+=========
+package pkg2;
+
+import pkg1.ParentBase;
+
+public class Program05_ProtectedCrossPackage extends ParentBase {
+    public void runTest() {
+        // Accessible through inheritance across packages
+        System.out.println("Using: " + frameworkName);
+        initDriver();
+    }
+
+    public static void main(String[] args) {
+        Program05_ProtectedCrossPackage child = new Program05_ProtectedCrossPackage();
+        child.runTest();
+
+        // NOTE: Accessing via parent reference across packages is NOT allowed:
+        // ParentBase p = new ParentBase();
+        // p.initDriver(); // COMPILE ERROR
+    }
+}

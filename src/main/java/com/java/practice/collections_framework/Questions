@@ -1,0 +1,29 @@
+Topic 23 – Collections Framework
+Objective: Collection operations, iteration, collection methods, sorting, removal and traversal.
+No.	Program	Requirement
+01	Collection Overview	Create an ArrayList and add, retrieve and display elements.
+02	Add and Remove	Add multiple elements to a collection and remove selected elements.
+03	Contains and Size	Check whether an element exists and display the collection size.
+04	Iteration	Iterate through a collection using for loop, enhanced for loop and Iterator.
+05	Sorting	Sort a collection of integers in ascending and descending order.
+06	Duplicate Elements	Store duplicate values in a List and observe the results.
+07	Remove Duplicates	Convert a List into a Set and display unique values.
+08	Collection Comparison	Compare two collections and find common elements.
+09	List Modification	Add, update, remove and retrieve elements from a List.
+10	Test Case Collection	Store test case names in a collection, sort them and remove completed test cases.
+
+
+
+Topic 24 – List, Set, Map and Queue
+Objective: Understand ArrayList, LinkedList, HashSet, LinkedHashSet, HashMap and Queue operations.
+No.	Program	Requirement
+01	ArrayList	Create an ArrayList of test case names and perform add, update, retrieve and remove operations.
+02	LinkedList	Create a LinkedList of tasks and demonstrate insertion and deletion at different positions.
+03	HashSet	Store duplicate values in a HashSet and observe how duplicates are handled.
+04	LinkedHashSet	Store values in a LinkedHashSet and observe insertion order and duplicate handling.
+05	HashMap	Store employee IDs as keys and employee names as values. Retrieve values using keys.
+06	Map Iteration	Iterate through a HashMap using entrySet, keySet and values.
+07	Queue	Create a Queue and demonstrate offer(), poll() and peek().
+08	PriorityQueue	Create a PriorityQueue of integers and observe the order in which elements are retrieved.
+09	Collections Comparison	Store duplicate and unique values using List and Set. Compare their behaviour.
+10	QA Test Data Management	Use a Map to store username and password, a List to store test cases and a Set to store unique test results.

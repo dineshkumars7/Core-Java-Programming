@@ -1,0 +1,13 @@
+Topic 22 – Exception Handling
+Objective: try-catch, multiple catch, finally, throw, throws, checked and unchecked exceptions and custom exceptions.
+No.	Program	Requirement
+01	Arithmetic Exception	Handle division by zero using try-catch.
+02	Array Index Exception	Handle accessing an invalid array index.
+03	Null Pointer Exception	Create a null String reference and handle the exception when invoking a method.
+04	Multiple Catch Blocks	Handle different exceptions using multiple catch blocks.
+05	Finally Block	Demonstrate the execution of finally with and without an exception.
+06	Throw Keyword	Throw an exception manually when age is below 18.
+07	Throws Keyword	Create a method that declares a checked exception using throws. Handle it in the calling method.
+08	Custom Exception	Create a custom InvalidLoginException and throw it when login credentials are invalid.
+09	Exception Propagation	Create multiple methods where an exception is propagated from one method to another. Handle it at the appropriate level.
+10	QA Test Execution Exception	Create a test execution method that throws a custom exception when a test configuration is invalid. Handle the exception in the runner.

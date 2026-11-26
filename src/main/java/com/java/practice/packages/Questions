@@ -1,0 +1,387 @@
+Topic 21 – Packages
+Objective: Package creation, imports, fully qualified names, cross-package access and package organization.
+No.	Program	Requirement
+01	Create a Package	Create a package called utilities and a class inside it.
+02	Import a Class	Create a class in one package and import it into another package.
+03	Import Multiple Classes	Create two classes in the same package and import them into another package.
+04	Fully Qualified Name	Access a class from another package using its fully qualified class name without import.
+05	Package with Methods	Create a package containing a calculator class and access its methods from another package.
+06	Cross-Package Objects	Create a class in package pages and instantiate it from a class in package tests.
+07	Package Access Restrictions	Create default-access members in one package and attempt to access them from another package.
+08	Package and Inheritance	Create a parent class in one package and a child class in another package. Access inherited members.
+09	Utility Package	Create a reusable package containing string utilities, number utilities and calculation utilities. Access them from a runner class.
+10	QA Framework Package Structure	Create base, pages, tests and utilities packages and implement a simple login execution using classes across packages.
+
+
+
+Program 01. Create a Package
+==============================
+Creates a package named utilities containing a simple helper class.
+File: utilities/LoggerUtil.java
+java
+package utilities;
+
+public class LoggerUtil {
+    public void log(String message) {
+        System.out.println("[LOG]: " + message);
+    }
+}
+
+
+Program 02. Import a Class
+==========================
+
+Creates a class in package models and imports it into package app using the import keyword.
+
+File 1: models/User.java
+
+package models;
+
+public class User {
+    public String username = "qa_admin";
+}
+
+File 2: app/Program02_ImportClass.java
+
+package app;
+
+import models.User; // Importing single class
+
+public class Program02_ImportClass {
+    public static void main(String[] args) {
+        User u = new User();
+        System.out.println("Logged in as: " + u.username);
+    }
+}
+
+
+Program 03. Import Multiple Classes
+===================================
+Creates two classes in package helpers and imports both into another package.
+
+File 1: helpers/DateHelper.java
+
+package helpers;
+
+public class DateHelper {
+    public void printDate() {
+        System.out.println("Date: 2026-11-26");
+    }
+}
+
+File 2: helpers/FileHelper.java
+
+package helpers;
+
+public class FileHelper {
+    public void readFile() {
+        System.out.println("Reading config.properties...");
+    }
+}
+
+File 3: app/Program03_ImportMultiple.java
+
+package app;
+
+import helpers.DateHelper;
+import helpers.FileHelper;
+// Alternatively, you can use wildcard import: import helpers.*;
+
+public class Program03_ImportMultiple {
+    public static void main(String[] args) {
+        DateHelper dh = new DateHelper();
+        FileHelper fh = new FileHelper();
+
+        dh.printDate();
+        fh.readFile();
+    }
+}
+
+Program 04. Fully Qualified Name
+================================
+
+Accesses a class from another package without an import statement by specifying packageName.ClassName.
+
+File 1: config/AppConfig.java
+
+package config;
+
+public class AppConfig {
+    public String env = "PRODUCTION";
+}
+
+
+File 2: app/Program04_FullyQualified.java
+
+package app;
+
+// No import statement used
+public class Program04_FullyQualified {
+    public static void main(String[] args) {
+        config.AppConfig cfg = new config.AppConfig();
+        System.out.println("Environment: " + cfg.env);
+    }
+}
+
+
+Program 05. Package with Methods
+=========================
+
+Creates a Calculator class in package mathops and invokes its methods from another package.
+
+File 1: mathops/Calculator.java
+
+package mathops;
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
+File 2: runner/Program05_PackageMethods.java
+
+package runner;
+
+import mathops.Calculator;
+
+public class Program05_PackageMethods {
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+        System.out.println("Sum: " + calc.add(15, 25));
+        System.out.println("Product: " + calc.multiply(6, 7));
+    }
+}
+
+Program 06. Cross-Package Objects
+==================================
+
+Creates a page class in pages and instantiates it inside a test class in tests.
+
+File 1: pages/HomePage.java
+
+package pages;
+
+public class HomePage {
+    public void verifyTitle() {
+        System.out.println("Home Page title verified successfully.");
+    }
+}
+
+File 2: tests/Program06_HomePageTest.java
+
+package tests;
+
+import pages.HomePage;
+
+public class Program06_HomePageTest {
+    public static void main(String[] args) {
+        HomePage home = new HomePage();
+        home.verifyTitle();
+    }
+}
+
+Program 07. Package Access Restrictions
+=======================================
+
+Demonstrates that default (package-private) members cannot be accessed outside their own package.
+
+File 1: internal/SecretData.java
+
+package internal;
+
+public class SecretData {
+    String defaultToken = "XYZ-123"; // Default access (no modifier)
+
+    void defaultMethod() {           // Default access (no modifier)
+        System.out.println("Internal method executed.");
+    }
+}
+
+File 2: external/Program07_AccessRestriction.java
+
+package external;
+
+import internal.SecretData;
+
+public class Program07_AccessRestriction {
+    public static void main(String[] args) {
+        SecretData data = new SecretData();
+
+        // UNCOMMENTING THESE WILL CAUSE COMPILE ERRORS:
+        // System.out.println(data.defaultToken); // Error: defaultToken is not public in SecretData
+        // data.defaultMethod();                  // Error: defaultMethod() is not public in SecretData
+
+        System.out.println("Default members cannot be accessed outside their package.");
+    }
+}
+
+
+Program 08. Package and Inheritance
+===================================
+
+Demonstrates cross-package inheritance where a subclass accesses public and protected members of a parent class in another package.
+
+File 1: core/BaseDriver.java
+
+package core;
+
+public class BaseDriver {
+    public String browser = "Firefox";
+    protected String driverVersion = "v132.0";
+    String internalFlag = "DEBUG"; // Default access
+}
+
+File 2: suite/Program08_CrossPackageInheritance.java
+
+package suite;
+
+import core.BaseDriver;
+
+public class Program08_CrossPackageInheritance extends BaseDriver {
+    public void displayDriverInfo() {
+        System.out.println("Browser : " + browser);       // Accessible (public)
+        System.out.println("Version : " + driverVersion); // Accessible (protected via inheritance)
+        // System.out.println(internalFlag);              // COMPILE ERROR (default is package-private)
+    }
+
+    public static void main(String[] args) {
+        Program08_CrossPackageInheritance test = new Program08_CrossPackageInheritance();
+        test.displayDriverInfo();
+    }
+}
+
+
+Program 09. Utility Package
+===========================
+
+Creates a multi-class reusable package utils and accesses all three utility classes from a runner class.
+
+File 1: utils/StringUtils.java
+
+package utils;
+
+public class StringUtils {
+    public static String toUpper(String text) {
+        return text.toUpperCase();
+    }
+}
+
+File 2: utils/NumberUtils.java
+
+package utils;
+
+public class NumberUtils {
+    public static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+}
+
+File 3: utils/CalcUtils.java
+
+package utils;
+
+public class CalcUtils {
+    public static double calculateDiscount(double price, double percent) {
+        return price - (price * percent / 100);
+    }
+}
+
+File 4: mainapp/Program09_UtilityRunner.java
+
+package mainapp;
+
+import utils.StringUtils;
+import utils.NumberUtils;
+import utils.CalcUtils;
+
+public class Program09_UtilityRunner {
+    public static void main(String[] args) {
+        System.out.println("Uppercase : " + StringUtils.toUpper("automation"));
+        System.out.println("Is 42 Even: " + NumberUtils.isEven(42));
+        System.out.println("Final Price: ₹" + CalcUtils.calculateDiscount(1000, 15));
+    }
+}
+
+Program 10. QA Framework Package Structure
+==========================================
+
+Implements a miniature Page Object Model (POM) login flow distributed across base, utilities, pages, and tests.
+
+File 1: base/BaseTest.java
+
+package base;
+
+public class BaseTest {
+    protected void openBrowser(String url) {
+        System.out.println("[Base] Launching browser and navigating to: " + url);
+    }
+
+    protected void closeBrowser() {
+        System.out.println("[Base] Closing browser session.");
+    }
+}
+
+File 2: utilities/WaitUtil.java
+
+package utilities;
+
+public class WaitUtil {
+    public static void waitForElement(String elementName) {
+        System.out.println("[Utility] Waiting for element to be visible: " + elementName);
+    }
+}
+
+File 3: pages/LoginPage.java
+
+package pages;
+
+import utilities.WaitUtil;
+
+public class LoginPage {
+    public void enterUsername(String user) {
+        WaitUtil.waitForElement("Username Field");
+        System.out.println("[Page] Entering username: " + user);
+    }
+
+    public void enterPassword(String pass) {
+        WaitUtil.waitForElement("Password Field");
+        System.out.println("[Page] Entering password: ********");
+    }
+
+    public void clickLogin() {
+        System.out.println("[Page] Clicking Login button.");
+    }
+}
+
+File 4: tests/Program10_LoginTest.java
+
+package tests;
+
+import base.BaseTest;
+import pages.LoginPage;
+
+public class Program10_LoginTest extends BaseTest {
+    public void executeLoginTest() {
+        openBrowser("https://example.com");
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.enterUsername("testuser@example.com");
+        loginPage.enterPassword("Pass@123");
+        loginPage.clickLogin();
+
+        System.out.println("[Test] Assertion Passed: User landed on Dashboard.");
+        closeBrowser();
+    }
+
+    public static void main(String[] args) {
+        Program10_LoginTest test = new Program10_LoginTest();
+        test.executeLoginTest();
+    }
+}
+
+
