@@ -1,0 +1,13 @@
+Topic 17 – Encapsulation
+Objective: Data hiding, private variables, getters, setters and validation.
+No.	Program	Requirement
+01	Employee Encapsulation	Create an Employee class with private ID, name and salary. Access them through getters and setters.
+02	Student Encapsulation	Create a Student class with private marks. Use a setter to accept marks only between 0 and 100.
+03	Bank Account	Create a private balance variable and expose deposit, withdrawal and balance retrieval methods.
+04	Age Validation	Create a private age variable. Reject negative age values using a setter.
+05	Password Encapsulation	Create a private password variable and provide a setter that validates minimum password length.
+06	Read-Only Property	Create a class with private variables and only getters. Initialize values using a constructor.
+07	Write-Only Property	Create a class with a private variable and setter only. Demonstrate controlled modification.
+08	Encapsulation with Multiple Fields	Create an Employee class with private ID, name, department and salary. Validate each field through setters.
+09	Data Hiding	Create a class containing private variables. Try accessing them directly from another class and observe the compiler error. Then access them through public methods.
+10	QA Test Configuration	Create an encapsulated TestConfiguration class with private browser, URL and timeout fields. Provide validation through setters and retrieve the values through getters.

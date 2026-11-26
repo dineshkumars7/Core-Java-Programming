@@ -18,5 +18,6 @@ class DerivedClass extends BaseClass {
 public class P7_ConstructorOrderDemo {
 	public static void main(String[] args) {
         DerivedClass obj = new DerivedClass();
+       
     }
 }

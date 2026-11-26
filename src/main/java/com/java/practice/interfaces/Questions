@@ -1,0 +1,13 @@
+Topic 18 – Interfaces
+Objective: Interface declaration, implementation, multiple inheritance through interfaces and default/static methods.
+No.	Program	Requirement
+01	Basic Interface	Create an interface Animal with a method sound(). Implement it in a Dog class.
+02	Multiple Interface Implementation	Create two interfaces and implement both in a single class.
+03	Interface Inheritance	Create a parent interface and a child interface using extends. Implement the child interface.
+04	Multiple Interface Inheritance	Create two parent interfaces and one child interface extending both.
+05	Default Method	Create an interface with a default method and invoke it through an implementing class object.
+06	Default Method Overriding	Override a default method in the implementing class.
+07	Static Interface Method	Create a static method inside an interface and invoke it using the interface name.
+08	Interface Variables	Demonstrate interface variables and their properties.
+09	Payment Interface	Create a Payment interface and implement it in CreditCardPayment and UpiPayment classes.
+10	Automation Interface Design	Create interfaces for BrowserActions and ScreenshotActions. Implement both in a class representing a browser utility.

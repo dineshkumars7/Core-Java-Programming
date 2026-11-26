@@ -1,0 +1,13 @@
+Topic 20 – Access Modifiers
+Objective: Understand public, private, protected and default access across classes and packages.
+No.	Program	Requirement
+01	Public Access	Create a class with public variable and method. Access them from another class in the same package.
+02	Private Access	Create a class with private variables and methods. Attempt access from another class and observe the restrictions.
+03	Default Access	Create a class with default access members and access them from another class in the same package.
+04	Protected Access	Create a parent class with protected members and access them from a child class in the same package.
+05	Protected Cross-Package	Create a parent class in one package and child class in another package. Access protected members through inheritance.
+06	Private Constructor	Create a class with a private constructor and demonstrate why an object cannot be created directly from another class.
+07	Access Modifier Comparison	Create four variables using all four access modifiers and test access from another class in the same package.
+08	Cross-Package Access	Create a class with public, protected, default and private methods. Access them from a class in another package.
+09	Access Modifier in Inheritance	Create parent and child classes and demonstrate which members can be accessed through inheritance.
+10	Framework Access Design	Design a class with private test data, protected reusable methods, public execution methods and default helper methods.

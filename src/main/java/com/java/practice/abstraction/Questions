@@ -1,0 +1,13 @@
+Topic 16 – Abstraction
+Objective: Abstract classes, abstract methods, concrete methods and implementation.
+No.	Program	Requirement
+01	Abstract Animal Class	Create an abstract class Animal with an abstract method sound(). Implement it in a Dog class.
+02	Abstract Vehicle Class	Create an abstract class Vehicle with abstract method start() and concrete method stop().
+03	Employee Abstraction	Create abstract class Employee with abstract method calculateSalary(). Implement it in two child classes.
+04	Shape Abstraction	Create abstract class Shape with abstract method calculateArea(). Implement Circle and Rectangle.
+05	Abstract Class with Constructor	Create an abstract class with a constructor and demonstrate how the constructor is invoked through a child object.
+06	Abstract Class with Fields	Create an abstract class with instance variables, a constructor and concrete methods. Access them through a child class.
+07	Multiple Abstract Methods	Create an abstract class containing three abstract methods and implement all three in the child class.
+08	Abstract Class with Partial Implementation	Create an abstract class with two abstract methods and two concrete methods. Implement only the abstract methods in the child class.
+09	Browser Abstraction	Create an abstract Browser class with abstract launch() and close() methods. Implement them in Chrome and Firefox classes.
+10	Automation Base Class	Create an abstract BaseTest class with abstract executeTest() and concrete setup and teardown methods. Implement it in LoginTest and SearchTest.

@@ -1,0 +1,13 @@
+Topic 19 – Static and Final Keywords
+Objective: Static variables, methods, initialization blocks, final variables, final methods and final classes.
+No.	Program	Requirement
+01	Static Variable	Create a class with a static variable and access it through the class name.
+02	Static Variable Shared	Create multiple objects and modify a static variable. Observe how the value is shared.
+03	Static Method	Create a static method and invoke it from the main method and another class.
+04	Static and Non-Static	Demonstrate accessing static and non-static members from static and non-static methods.
+05	Static Block	Create a class with a static block and main method. Observe the execution sequence.
+06	Multiple Static Blocks	Create multiple static blocks and observe their execution order.
+07	Final Variable	Declare final variables and demonstrate initialization at declaration and through a constructor.
+08	Final Method	Create a parent class with a final method and attempt to override it in a child class. Observe the compiler restriction.
+09	Final Class	Create a final class and attempt to extend it. Observe the compiler restriction.
+10	Automation Configuration	Create a class containing static final constants for application URL, timeout and test environment values. Access them from another class.
